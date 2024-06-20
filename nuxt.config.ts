@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     "shadcn-nuxt",
     "@nuxt/icon",
     "@nuxtjs/color-mode",
+    "@nuxtjs/seo",
   ],
   shadcn: {
     prefix: "",
