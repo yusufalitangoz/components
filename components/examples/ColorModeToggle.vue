@@ -11,8 +11,8 @@ const icon = new Map([
 <template>
   <DropdownMenu>
     <DropdownMenuTrigger as-child>
-      <Button>
-        <Icon :name="icon.get(colorMode.preference)!" />
+      <Button size="icon" variant="outline">
+        <Icon :name="icon.get(colorMode.preference)!" size="18" />
       </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent>
