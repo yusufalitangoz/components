@@ -1,3 +1,5 @@
 <template>
-  <main></main>
+  <main>
+    <Header />
+  </main>
 </template>
