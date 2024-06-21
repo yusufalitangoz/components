@@ -23,14 +23,6 @@ export default defineNuxtConfig({
   },
   shiki: {
     bundledLangs: ["vue"],
-    bundledThemes: ["github-dark-default"],
     defaultLang: "vue",
-    defaultTheme: "github-dark-default",
   },
-  plugins: [
-    {
-      src: "~/plugins/components.ts",
-      mode: "server",
-    },
-  ],
 });
