@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@nuxtjs/seo",
     "nuxt-shiki",
+    "@nuxt/image"
   ],
   shadcn: {
     prefix: "",
