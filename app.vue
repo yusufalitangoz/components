@@ -4,7 +4,7 @@
     <HeroHeader />
     <section class="grid gap-10 mb-10">
       <Example
-        v-for="component in ['ColorModeToggle', 'Logo', 'Header']"
+        v-for="component in ['ColorModeToggle', 'Logo', 'Header', 'Footer']"
         :component="component"
         :key="component"
       />
