@@ -25,19 +25,15 @@ const linkGroups = [
 ];
 const socials = [
   {
-    icon: "mdi-facebook",
-    href: "https://www.facebook.com",
-  },
-  {
-    icon: "mdi-twitter",
+    icon: "prime:twitter",
     href: "https://www.twitter.com",
   },
   {
-    icon: "mdi-instagram",
+    icon: "bi:instagram",
     href: "https://www.instagram.com",
   },
   {
-    icon: "mdi-linkedin",
+    icon: "bi:linkedin",
     href: "https://www.linkedin.com",
   },
 ];
@@ -60,7 +56,7 @@ const socials = [
           :to="social.href"
           target="_blank"
         >
-          <Icon :name="social.icon" size="20" />
+          <Icon :name="social.icon" size="17" />
         </NuxtLink>
       </section>
     </section>
