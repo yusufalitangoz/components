@@ -1,9 +1,5 @@
 <template>
   <NuxtLink to="/">
-    <NuxtImg
-      src="https://nuxt.com/assets/design-kit/icon-green.svg"
-      class="w-10 h-10"
-      alt="logo"
-    />
+    <NuxtImg src="/logo.png" class="w-9" alt="logo" />
   </NuxtLink>
 </template>
