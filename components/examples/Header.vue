@@ -15,7 +15,7 @@ const links = [
         <ExamplesLogo />
         <ul class="hidden md:flex gap-5">
           <li v-for="link in links" :key="link.name">
-            <NuxtLink class="text-zinc-600 dark:text-zinc-400" :to="link.href">
+            <NuxtLink :to="link.href">
               {{ link.name }}
             </NuxtLink>
           </li>
@@ -32,12 +32,9 @@ const links = [
           <SheetContent>
             <SheetHeader>
               <SheetDescription>
-                <ul class="grid gap-5 text-center mt-10">
+                <ul class="grid gap-5 mt-10">
                   <li v-for="link in links" :key="link.name">
-                    <NuxtLink
-                      class="text-zinc-600 dark:text-zinc-400 text-base"
-                      :to="link.href"
-                    >
+                    <NuxtLink :to="link.href">
                       {{ link.name }}
                     </NuxtLink>
                   </li>
