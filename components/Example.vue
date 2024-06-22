@@ -44,7 +44,7 @@ const resolvedComponent = await import(
     </section>
     <section class="border border-input rounded-lg mt-2 px-2 pb-2">
       <TabsContent value="preview">
-        <section class="p-10 flex justify-center">
+        <section class="p-10 flex justify-center [&>*]:relative">
           <component :is="resolvedComponent" />
         </section>
       </TabsContent>
