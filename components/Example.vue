@@ -1,24 +1,25 @@
 <script setup lang="ts">
-const { component } = defineProps<{
-  component: string;
+const { name, customPreview } = defineProps<{
+  name: string;
+  customPreview?: string;
 }>();
 
 const copyIcon = ref("icon-park-outline:copy");
 
 function onCopy() {
-  navigator.clipboard.writeText(raw);
+  navigator.clipboard.writeText(code);
   copyIcon.value = "icon-park-outline:check";
   setTimeout(() => {
     copyIcon.value = "icon-park-outline:copy";
   }, 1500);
 }
 
-const raw = await import(`@/components/examples/${component}.vue?raw`).then(
+const code = await import(`@/components/examples/${name}.vue?raw`).then(
   (x) => x.default
 );
 
-const resolvedComponent = await import(
-  `@/components/examples/${component}.vue`
+const preview = await import(
+  `@/components/examples/${customPreview || name}.vue`
 ).then((x) => x.default);
 </script>
 
@@ -26,7 +27,7 @@ const resolvedComponent = await import(
   <Tabs default-value="preview">
     <section class="flex gap-2 items-end">
       <h1 class="text-sm font-bold mr-auto">
-        {{ component }}
+        {{ name }}
       </h1>
       <TabsList>
         <TabsTrigger value="preview">
@@ -45,11 +46,11 @@ const resolvedComponent = await import(
     <section class="border border-input rounded-lg mt-2 px-2 pb-2">
       <TabsContent value="preview">
         <section class="p-10 flex justify-center [&>*]:relative">
-          <component :is="resolvedComponent" />
+          <component :is="preview" />
         </section>
       </TabsContent>
       <TabsContent value="code">
-        <Shiki :code="raw" class="bg-[#0d1117] p-5 rounded-lg" />
+        <Shiki :code="code" class="bg-[#0d1117] p-5 rounded-lg" />
       </TabsContent>
     </section>
   </Tabs>
