@@ -14,9 +14,9 @@ const links = [
       <section class="flex items-center gap-5">
         <ExamplesLogo />
         <ul class="hidden md:flex gap-5">
-          <li v-for="link in links" :key="link.name">
-            <NuxtLink :to="link.href">
-              {{ link.name }}
+          <li v-for="{ name, href } in links" :key="name">
+            <NuxtLink :to="href">
+              {{ name }}
             </NuxtLink>
           </li>
         </ul>
@@ -33,9 +33,9 @@ const links = [
             <SheetHeader>
               <SheetDescription>
                 <ul class="grid gap-5 mt-10">
-                  <li v-for="link in links" :key="link.name">
-                    <NuxtLink :to="link.href">
-                      {{ link.name }}
+                  <li v-for="{ name, href } in links" :key="name">
+                    <NuxtLink :to="href">
+                      {{ name }}
                     </NuxtLink>
                   </li>
                 </ul>

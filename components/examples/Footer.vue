@@ -3,23 +3,23 @@ const linkGroups = [
   {
     title: "Navigation",
     links: [
-      { name: "Home", url: "/" },
-      { name: "About", url: "/about" },
-      { name: "Contact", url: "/contact" },
+      { name: "Home", href: "/" },
+      { name: "About", href: "/about" },
+      { name: "Contact", href: "/contact" },
     ],
   },
   {
     title: "Legal",
     links: [
-      { name: "Privacy", url: "/privacy" },
-      { name: "Terms", url: "/terms" },
+      { name: "Privacy", href: "/privacy" },
+      { name: "Terms", href: "/terms" },
     ],
   },
   {
     title: "Support",
     links: [
-      { name: "Help", url: "/help" },
-      { name: "FAQ", url: "/faq" },
+      { name: "Help", href: "/help" },
+      { name: "FAQ", href: "/faq" },
     ],
   },
 ];
@@ -50,20 +50,20 @@ const socials = [
         </p>
         <section class="flex flex-wrap gap-2">
           <NuxtLink
-            v-for="social in socials"
-            :key="social.icon"
-            :to="social.href"
+            v-for="{ icon, href } in socials"
             target="_blank"
+            :key="icon"
+            :to="href"
           >
-            <Icon :name="social.icon" size="17" />
+            <Icon :name="icon" size="17" />
           </NuxtLink>
         </section>
       </section>
       <section class="flex flex-wrap gap-10 md:justify-end">
-        <ul v-for="group in linkGroups" :key="group.title">
-          <h1 class="font-semibold mb-2">{{ group.title }}</h1>
-          <li v-for="link in group.links" :key="link.name" class="text-sm">
-            <NuxtLink :to="link.url">{{ link.name }}</NuxtLink>
+        <ul v-for="{ title, links } in linkGroups" :key="title">
+          <h1 class="font-semibold mb-2">{{ title }}</h1>
+          <li v-for="{ name, href } in links" :key="name" class="text-sm">
+            <NuxtLink :to="href">{{ name }}</NuxtLink>
           </li>
         </ul>
       </section>
