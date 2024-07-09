@@ -41,7 +41,7 @@ const socials = [
 
 <template>
   <footer class="bg-zinc-100 dark:bg-black border-t-[1px] w-full">
-    <section class="container p-10 grid md:grid-cols-2 gap-10">
+    <section class="container py-10 grid md:grid-cols-2 gap-10">
       <section class="flex flex-col gap-2 place-items-start">
         <ExamplesLogo />
         <p class="text-sm">
